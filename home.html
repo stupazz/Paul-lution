@@ -28,9 +28,21 @@
 <source src="VID/Home.mp4" type="video/mp4">
 </video>
 
+    <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">SOUND OFF</button>
+
     <div class="home-caption">
       <span>ELECTRONIC MUSIC / LIVE</span>
     </div>
   </main>
+  <script>
+    const v = document.getElementById("myVideo");
+    const b = document.getElementById("soundToggle");
+    b.addEventListener("click", () => {
+      v.muted = !v.muted;
+      if (!v.muted) v.play();
+      b.textContent = v.muted ? "SOUND OFF" : "SOUND ON";
+      b.setAttribute("aria-pressed", String(!v.muted));
+    });
+  </script>
 </body>
 </html>
