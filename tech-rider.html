@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TECH RIDER — PAUL LUTION</title>
+  <meta name="description" content="PAUL LUTION LIVE PERFORMANCE TECHNICAL RIDER AND EQUIPMENT SETUP.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* TECH RIDER */
+
+    .tech-rider {
+      width: min(100% - 48px, 1200px);
+      margin: 0 auto;
+      padding: 100px 0 60px;
+    }
+
+    .rider-header {
+      margin-bottom: 80px;
+    }
+
+    .rider-kicker {
+      color: #b7ff00;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+    }
+
+    .rider-header h1 {
+      margin: 24px 0;
+      font-size: clamp(48px, 9vw, 110px);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+    }
+
+    .rider-header > p:last-child {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .rider-section {
+      margin-bottom: 70px;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+    }
+
+    .rider-section h2 {
+      margin: 20px 0 28px;
+      font-size: clamp(17px, 2vw, 24px);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+    }
+
+    .rider-section h2 span {
+      margin-right: 16px;
+      color: #b7ff00;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .rider-copy {
+      max-width: 650px;
+      color: #999;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* EQUIPMENT */
+
+    .equipment-intro {
+      margin-bottom: 24px;
+      color: #888;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      line-height: 1.8;
+    }
+
+    .equipment-layout {
+      display: grid;
+      grid-template-columns: minmax(270px, 0.8fr) minmax(0, 1.4fr);
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* EQUIPMENT TABLE */
+
+    .equipment-specs {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 12px;
+    }
+
+    .equipment-specs th {
+      padding: 12px 8px;
+      border-bottom: 1px solid #b7ff00;
+      color: #b7ff00;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-align: left;
+    }
+
+    .equipment-specs td {
+      padding: 14px 8px;
+      border-bottom: 1px solid #292929;
+      color: #e5e5e5;
+      line-height: 1.5;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+    }
+
+    .equipment-specs th:first-child,
+    .equipment-specs td:first-child {
+      padding-left: 0;
+    }
+
+    .equipment-specs th:last-child,
+    .equipment-specs td:last-child {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .equipment-specs td:last-child {
+      color: #b7ff00;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .specs-subtitle {
+      margin: 28px 0 12px;
+      color: #888;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+    }
+
+    .table-dimensions {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      font-size: 12px;
+    }
+
+    .table-dimensions span:first-child {
+      color: #e5e5e5;
+    }
+
+    .table-dimensions span:last-child {
+      color: #b7ff00;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    /* SETUP IMAGE */
+
+    .equipment-visual {
+      min-width: 0;
+    }
+
+    .visual-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+      color: #b7ff00;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+    }
+
+    .setup-image-frame {
+      width: 100%;
+      border: 1px solid #292929;
+      background: #0b0b0b;
+      overflow: hidden;
+    }
+
+    .setup-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .setup-image-placeholder {
+      display: grid;
+      place-items: center;
+      aspect-ratio: 4 / 3;
+      color: #555;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+    }
+
+    .visual-caption {
+      margin-top: 12px;
+      color: #777;
+      font-size: 10px;
+      line-height: 1.8;
+    }
+
+    /* DISCLAIMER */
+
+    .rider-disclaimer {
+      margin-top: 80px;
+      padding-top: 20px;
+      border-top: 1px solid #b7ff00;
+    }
+
+    .disclaimer-label {
+      margin-bottom: 14px;
+      color: #b7ff00;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+    }
+
+    .rider-disclaimer p:last-child {
+      max-width: 850px;
+      margin: 0;
+      color: #999;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 760px) {
+      .tech-rider {
+        width: calc(100% - 32px);
+        padding-top: 72px;
+      }
+
+      .rider-header {
+        margin-bottom: 60px;
+      }
+
+      .equipment-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .equipment-specs {
+        font-size: 12px;
+      }
+
+      .equipment-specs th {
+        font-size: 9px;
+      }
+
+      .equipment-specs td {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+
+      .equipment-visual {
+        width: 100%;
+      }
+
+      .rider-disclaimer {
+        margin-top: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav class="navbar">
+    <a class="logo" href="home.html">PAUL LUTION</a>
+    <a class="mobile-logo" href="home.html">PL</a>
+
+    <div class="nav-links">
+      <a href="work.html">WORKS</a>
+      <a href="about.html">ABOUT</a>
+      <a href="tech-rider.html" aria-current="page">TECH RIDER</a>
+    </div>
+  </nav>
+
+  <main class="tech-rider">
+
+    <!-- HEADER -->
+
+    <header class="rider-header">
+      <p class="rider-kicker">PAUL LUTION / LIVE PERFORMANCE</p>
+      <h1>TECH RIDER</h1>
+      <p>TECHNICAL REQUIREMENTS AND STAGE SETUP.</p>
+    </header>
+
+    <!-- 01 / SOUNDCHECK -->
+
+    <section class="rider-section">
+      <h2><span>01</span> SOUNDCHECK</h2>
+      <div class="rider-copy">
+        <p>[SOUNDCHECK REQUIREMENTS TO BE CONFIRMED.]</p>
+      </div>
+    </section>
+
+    <!-- 02 / POWER -->
+
+    <section class="rider-section">
+      <h2><span>02</span> POWER AND PLUGS</h2>
+      <div class="rider-copy">
+        <p>[POWER SUPPLY AND ELECTRICAL REQUIREMENTS TO BE CONFIRMED.]</p>
+      </div>
+    </section>
+
+    <!-- 03 / MONITOR -->
+
+    <section class="rider-section">
+      <h2><span>03</span> MONITOR</h2>
+      <div class="rider-copy">
+        <p>[MONITORING REQUIREMENTS TO BE CONFIRMED.]</p>
+      </div>
+    </section>
+
+    <!-- 04 / BOOTH ADDITIONAL REQUIREMENTS -->
+
+    <section class="rider-section">
+      <h2><span>04</span> BOOTH ADDITIONAL REQUIREMENTS</h2>
+      <div class="rider-copy">
+        <p>[ADDITIONAL BOOTH REQUIREMENTS TO BE CONFIRMED.]</p>
+      </div>
+    </section>
+
+    <!-- 05 / EQUIPMENT -->
+
+    <section class="rider-section equipment-section">
+
+      <h2><span>05</span> EQUIPMENT</h2>
+
+      <p class="equipment-intro">
+        EQUIPMENT SPECIFICATIONS / OPTIMAL SETUP DIMENSIONS IN CM
+      </p>
+
+      <div class="equipment-layout">
+
+        <!-- LEFT: EQUIPMENT LIST -->
+
+        <div class="equipment-list">
+
+          <table class="equipment-specs">
+
+            <thead>
+              <tr>
+                <th>EQUIPMENT</th>
+                <th>DIMENSIONS</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>FOCUSRITE SCARLETT 18i20</td>
+                <td>50 × 30 CM</td>
+              </tr>
+
+              <tr>
+                <td>MACBOOK AIR</td>
+                <td>33 × 23 CM</td>
+              </tr>
+
+              <tr>
+                <td>KORG microKORG</td>
+                <td>53 × 23 CM</td>
+              </tr>
+
+              <tr>
+                <td>ELEKTRON ANALOG RYTM MKI</td>
+                <td>34 × 18 CM</td>
+              </tr>
+
+              <tr>
+                <td>MOOG MINITAUR</td>
+                <td>21 × 13 CM</td>
+              </tr>
+
+              <tr>
+                <td>FENDER JAZZ BASS</td>
+                <td>FLOOR SPACE</td>
+              </tr>
+            </tbody>
+
+          </table>
+
+          <p class="specs-subtitle">OPTIMAL TABLE DIMENSIONS</p>
+
+          <div class="table-dimensions">
+            <span>TABLE FOOTPRINT</span>
+            <span>90 × 60 CM</span>
+          </div>
+
+          <div class="table-dimensions">
+            <span>BASS FLOOR SPACE</span>
+            <span>40 × 40 CM</span>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: STATIC TOP-VIEW IMAGE -->
+
+        <div class="equipment-visual">
+
+          <div class="visual-label">
+            <span>LIVE SETUP</span>
+            <span>TOP VIEW</span>
+          </div>
+
+          <div class="setup-image-frame">
+            <div class="setup-image-placeholder">IMAGE COMING SOON</div>
+          </div>
+
+          <p class="visual-caption">
+            EQUIPMENT ARRANGEMENT SHOWN FROM ABOVE.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- DISCLAIMER -->
+
+    <footer class="rider-disclaimer">
+
+      <p class="disclaimer-label">SETUP FLEXIBILITY</p>
+
+      <p>
+        THE DIMENSIONS LISTED ABOVE REPRESENT THE OPTIMAL SETUP FOR
+        COMFORTABLE EQUIPMENT PLACEMENT AND PERFORMANCE. THE SETUP CAN
+        ALSO BE ACCOMMODATED IN SMALLER SPACES, PROVIDED THAT ALL
+        ESSENTIAL EQUIPMENT FITS SAFELY AND REMAINS ACCESSIBLE.
+      </p>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>
