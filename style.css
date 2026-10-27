@@ -443,3 +443,36 @@ body {
   padding: 5px 12px;
   cursor: pointer;
 }
+
+
+/* BODY TEXT — plain sans serif (Arial Narrow, installed on the system) */
+
+:root {
+  --font-text: "Arial Narrow", "Liberation Sans Narrow", "Helvetica Neue", Arial, sans-serif;
+}
+
+.artist-bio p,
+.social-links,
+.rider-copy,
+.equipment-specs,
+.table-dimensions,
+.visual-caption,
+.rider-disclaimer p:last-child {
+  font-family: var(--font-text);
+}
+
+/* VERTICAL (SHORTS) VIDEOS */
+
+.work-item--short {
+  flex-basis: min(30vw, 340px);
+}
+
+.embed-frame--short {
+  aspect-ratio: 9 / 16;
+}
+
+@media (max-width: 780px) {
+  .work-item--short {
+    flex-basis: 64vw;
+  }
+}
