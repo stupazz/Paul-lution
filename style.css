@@ -476,3 +476,33 @@ body {
     flex-basis: 64vw;
   }
 }
+
+/* TITLES — larger PaulLution type */
+
+.section-heading h1 {
+  font-size: clamp(44px, 9vw, 110px);
+}
+
+.item-caption h2,
+.artist-bio h2 {
+  font-size: clamp(18px, 2vw, 26px);
+  line-height: 1.15;
+}
+
+.rider-header h1 {
+  font-size: clamp(60px, 12vw, 150px) !important;
+}
+
+.rider-section h2 {
+  font-size: clamp(22px, 3vw, 36px) !important;
+}
+
+.rider-section h2 span {
+  font-size: 15px !important;
+}
+
+/* SECOND HORIZONTAL SCROLLER (SHORTS) */
+
+.horizontal-archive--shorts {
+  margin-top: 28px;
+}
